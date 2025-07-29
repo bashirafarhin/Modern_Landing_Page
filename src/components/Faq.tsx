@@ -21,7 +21,7 @@ const Faq: React.FC = () => {
         FAQ<span className="text-yellow-500">s</span>
       </h2>
       <p className="text-sm text-gray-500 mb-6 text-center">
-        We Know a Founder's Mind Is Always Curious — So We’ve Got You Covered.
+        Got questions? — We&apos;ve Got You Covered.
       </p>
 
       <div className="w-full max-w-4xl space-y-4">

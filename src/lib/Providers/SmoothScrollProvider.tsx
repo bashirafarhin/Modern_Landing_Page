@@ -12,6 +12,16 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import type LocomotiveScroll from "locomotive-scroll";
 
+type LocoInstance = {
+  scroll: {
+    instance: {
+      scroll: {
+        y: number;
+      };
+    };
+  };
+};
+
 type SmoothScrollContextType = {
   scroll: LocomotiveScroll | null;
 };
@@ -63,8 +73,13 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
               disableLerp: true,
             });
           }
-          // return locoScrollInstance?.scroll?.instance?.scroll?.y ?? 0;
-          return (locoScrollInstance as any)?.scroll?.instance?.scroll?.y ?? 0;
+          return (
+            // Try to access the scroll position safely
+            (locoScrollInstance &&
+              // @ts-ignore: Accessing internal property for scroll position
+              locoScrollInstance.instance?.scroll?.y) ??
+            0
+          );
         },
         getBoundingClientRect() {
           return {
