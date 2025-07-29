@@ -12,22 +12,23 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import type LocomotiveScroll from "locomotive-scroll";
 
-type LocoInstance = {
-  scroll: {
-    instance: {
-      scroll: {
-        y: number;
-      };
-    };
-  };
-};
-
 type SmoothScrollContextType = {
   scroll: LocomotiveScroll | null;
 };
 
+type LocomotiveScrollOptions = {
+  el: HTMLElement;
+  smooth?: boolean;
+  direction?: "vertical" | "horizontal";
+  gestureDirection?: "vertical" | "horizontal";
+  smoothMobile?: boolean;
+  multiplier?: number;
+  class?: string;
+  [key: string]: unknown;
+};
+
 type SmoothScrollProviderProps = PropsWithChildren<{
-  options?: Record<string, any>;
+  options?: Partial<LocomotiveScrollOptions>;
 }>;
 
 export const SmoothScrollContext = createContext<SmoothScrollContextType>({
@@ -49,12 +50,13 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
     const initSmoothScroll = async () => {
       const el = document.querySelector(
         "[data-scroll-container]"
-      ) as HTMLElement;
-      scrollRef.current = el;
+      ) as HTMLElement | null;
 
       if (!el) return;
+      scrollRef.current = el;
 
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const LocomotiveScroll = (await import("locomotive-scroll"))
+        .default as typeof import("locomotive-scroll").default;
 
       locoScrollInstance = new LocomotiveScroll({
         el,
@@ -64,7 +66,6 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
 
       setScroll(locoScrollInstance);
 
-      // Setup ScrollTrigger proxy
       ScrollTrigger.scrollerProxy(el, {
         scrollTop(value) {
           if (value !== undefined) {
@@ -73,13 +74,9 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
               disableLerp: true,
             });
           }
-          return (
-            // Try to access the scroll position safely
-            (locoScrollInstance &&
-              // @ts-ignore: Accessing internal property for scroll position
-              locoScrollInstance.instance?.scroll?.y) ??
-            0
-          );
+
+          // @ts-expect-error: Accessing undocumented internal scroll property
+          return locoScrollInstance?.instance?.scroll?.y ?? 0;
         },
         getBoundingClientRect() {
           return {
@@ -92,10 +89,8 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
         pinType: el.style.transform ? "transform" : "fixed",
       });
 
-      // Update ScrollTrigger on scroll
-      locoScrollInstance.on("scroll", ScrollTrigger.update);
+      locoScrollInstance.on("scroll", () => ScrollTrigger.update());
 
-      // Refresh ScrollTrigger on load
       ScrollTrigger.addEventListener("refresh", () =>
         locoScrollInstance?.update()
       );
