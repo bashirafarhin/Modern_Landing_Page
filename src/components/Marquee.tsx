@@ -1,43 +1,37 @@
+"use client";
+
 import React, { ReactNode } from "react";
+import clsx from "clsx";
 
 type MarqueeProps = {
   items: ReactNode[];
-  speed?: number; // in seconds
   className?: string;
-  dir?: "left" | "right";
+  direction?: "forwards" | "reverse";
+  speed?: number;
 };
 
 const Marquee: React.FC<MarqueeProps> = ({
   items,
-  speed = 30,
   className = "",
-  dir = "left",
+  direction = "forwards",
+  speed = 20,
 }) => {
-  const animationClass =
-    dir === "left" ? "animate-marquee" : "animate-marquee-reverse";
-  const reverseAnimationClass =
-    dir === "left" ? "animate-marquee2" : "animate-marquee2-reverse";
+  const trackStyle: React.CSSProperties = {
+    animation: `marquee-move-text ${speed}s linear infinite ${direction}`,
+    paddingLeft: "4.8rem",
+    gap: "4.8rem",
+  };
 
   return (
-    <div className={`relative flex overflow-x-hidden ${className}`}>
-      <div
-        className={`flex ${animationClass} whitespace-nowrap`}
-        style={{ animationDuration: `${speed}s` }}
-      >
-        {items.map((child, idx) => (
-          <div key={idx} className="my-auto mx-4">
-            {child}
-          </div>
-        ))}
-      </div>
-
-      <div
-        className={`absolute top-0 flex ${reverseAnimationClass} whitespace-nowrap`}
-        style={{ animationDuration: `${speed}s` }}
-      >
-        {items.map((child, idx) => (
-          <div key={`copy-${idx}`} className="my-auto mx-4">
-            {child}
+    <div className={clsx("overflow-clip", className)}>
+      <div className="flex w-max marquee-text-track" style={trackStyle}>
+        {[...items, ...items].map((item, index) => (
+          <div
+            key={index}
+            aria-hidden={index >= items.length}
+            className="whitespace-nowrap m-auto"
+          >
+            {item}
           </div>
         ))}
       </div>

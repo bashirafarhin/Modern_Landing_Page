@@ -22,20 +22,24 @@ const FadeInText: React.FC<FadeInTextProps> = ({
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
       {
         root: null,
-        threshold: 0, // triggers as soon as any pixel is visible
-        rootMargin: "90% 0px 0px 0px", // triggers when the top of the element hits 30% from the top
+        threshold: 0,
+        rootMargin: "90% 0px 0px 0px",
       }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(element);
+
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      observer.unobserve(element); // using the saved reference
     };
   }, [threshold]);
 
@@ -44,7 +48,7 @@ const FadeInText: React.FC<FadeInTextProps> = ({
       ref={ref}
       data-scroll
       className={clsx(
-        "transition-colors duration-700 ease-in-out text-8xl font-bold",
+        "transition-colors duration-700 ease-in-out text-xl sm:text-4xl md:text-6xl lg:text-8xl font-bold",
         reverse ? (inView ? activeClassName : className) : className,
         !reverse && inView && activeClassName
       )}

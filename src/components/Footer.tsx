@@ -7,14 +7,14 @@ import Logo from "@/components/ui/Logo";
 
 const Footer = () => {
   return (
-    <footer className="w-[80vw] py-6 px-8 flex flex-col items-center space-y-2">
-      <div className="flex flex-col sm:flex-row gap-4 w-full justify-between items-center">
+    <footer className="w-full max-w-6xl p-2 lg:p-4 flex flex-col items-center space-y-2 mx-auto">
+      <div className="flex flex-col md:flex-row gap-4 w-full justify-between items-center">
         <Logo />
-        <div className="flex gap-4 text-sm">
-          <Link href="/">Partner with us</Link>
+        <div className="flex gap-4 text-sm flex-wrap">
+          <Link href="/">Partnership</Link>
           <Link href="/">Blogs</Link>
           <Link href="/">Events</Link>
-          <Link href="/">Contact Us</Link>
+          <Link href="/">Contact</Link>
           <Link href="/">Privacy Policy</Link>
         </div>
       </div>

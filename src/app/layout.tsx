@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "react-hot-toast";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
-import { SmoothScrollProvider } from "@/lib/Providers/SmoothScrollProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,16 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} flex flex-col min-h-screen w-screen justify-end items-center font-sans antialiased`}
+        className={`${poppins.className} border border-pink-500 flex flex-col justify-between min-h-screen font-sans antialiased`}
       >
-        <Toaster position="top-right" />
-        {/* <SmoothScrollProvider options={{ smooth: true }}> */}
         <Header />
-        <main data-scroll-container className="mt-20">
-          {children}
-        </main>
+        <main className="mt-10">{children}</main>
         <Footer />
-        {/* </SmoothScrollProvider> */}
       </body>
     </html>
   );

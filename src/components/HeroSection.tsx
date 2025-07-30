@@ -5,26 +5,28 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-screen h-screen flex justify-center items-center my-5 overflow-hidden">
-      {/* Glowing Animated Circle */}
-      {/* <div className="absolute w-full max-w-2xl aspect-square rounded-full border border-yellow-300 smoke-glow pointer-events-none" /> */}
-      <div className="absolute w-full max-w-2xl aspect-square rounded-full smoke-glow pointer-events-none overflow-hidden">
-        {/* Smoke Blobs */}
+    <div className="w-full relative mx-auto rounded-xl p-4">
+      {/* circle */}
+      <div className="mx-auto absolute w-full max-w-3xl aspect-square rounded-full smoke-glow pointer-events-none overflow-hidden">
         <div className="smoke-blob bg-yellow-200 opacity-20" />
         <div className="smoke-blob bg-orange-300 opacity-20 delay-1000" />
         <div className="smoke-blob bg-yellow-100 opacity-10 delay-2000" />
       </div>
 
-      {/* Text */}
-      <div className="absolute max-w-3xl p-3 flex items-center flex-col text-center">
-        <h1 className="font-bold text-[3rem]">Welcome to Our Platform</h1>
-        <p className="font-extralight mt-7">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-          commodi exercitationem deleniti doloremque facilis. Velit eligendi
-          itaque sunt laudantium cumque ratione quis atque placeat, eius
-          inventore, rerum porro animi omnis.
-        </p>
-        <div className="flex flex-col sm:flex-col md:flex-row items-center gap-4 mt-8">
+      {/* text */}
+      <div className="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center flex-col text-center">
+        <h1 className="font-bold text-[6vw] sm:text-md">
+          Welcome to Our Platform
+        </h1>
+        <div className="max-w-2xl my-3">
+          <p className="font-extralight">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+            commodi exercitationem deleniti doloremque facilis. Velit eligendi
+            itaque sunt laudantium cumque ratione quis atque placeat, eius
+            inventore, rerum porro animi omnis.
+          </p>
+        </div>
+        <div className="flex flex-col sm:flex-col md:flex-row items-center gap-4">
           <Button className="group not-prose inline-flex items-center gap-1 pl-2 pr-0.5">
             Get Started
             <svg
@@ -66,29 +68,8 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
+      {/*  */}
 
-      {/* 🔥 Smoke Animation CSS */}
-      {/* <style jsx>{`
-        .smoke-glow {
-          animation: smokePulse 6s ease-in-out infinite;
-          box-shadow: 0 0 40px 10px rgba(255, 140, 0, 0.3),
-            inset 0 0 40px 10px rgba(255, 215, 0, 0.2);
-        }
-
-        @keyframes smokePulse {
-          0%,
-          100% {
-            box-shadow: 0 0 40px 10px rgba(255, 140, 0, 0.3),
-              inset 0 0 40px 10px rgba(255, 215, 0, 0.2);
-            transform: rotate(0deg) scale(1);
-          }
-          50% {
-            box-shadow: 0 0 80px 20px rgba(255, 215, 0, 0.5),
-              inset 0 0 80px 20px rgba(255, 140, 0, 0.4);
-            transform: rotate(2deg) scale(1.03);
-          }
-        }
-      `}</style> */}
       <style jsx>{`
         .smoke-glow {
           animation: smokePulse 6s ease-in-out infinite;

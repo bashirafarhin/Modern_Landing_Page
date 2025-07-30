@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ title, imgUrl, link }) => {
       />
 
       {/* Title on Hover */}
-      <div className="p-4 absolute inset-0 hidden text-center text-[3rem] text-black items-center justify-center bg-black/10 font-semibold group-hover:flex transition-all duration-300">
+      <div className="p-4 absolute inset-0 hidden text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl golden items-center justify-center bg-black/20 font-semibold group-hover:flex transition-all duration-300">
         {title}
       </div>
     </div>

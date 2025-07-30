@@ -6,8 +6,8 @@ const Logo = () => {
     <div>
       <Link href="/">
         <i className="flex items-center">
-          <p className="text-2xl font-bold">ADmyBRAND</p>
-          <span>.com</span>
+          <p className="text-[1rem] font-bold lg:text-2xl">ADmyBRAND</p>
+          {/* <span>.com</span> */}
         </i>
       </Link>
     </div>

@@ -18,9 +18,9 @@ const Faq: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full px-4 py-8 my-24">
       <h2 className="text-[3rem] font-bold text-center">
-        FAQ<span className="text-yellow-500">s</span>
+        FAQ<span className="golden">s</span>
       </h2>
-      <p className="text-sm text-gray-500 mb-6 text-center">
+      <p className="text-gray-600 text-sm mb-6 text-center">
         Got questions? — We&apos;ve Got You Covered.
       </p>
 
@@ -34,7 +34,7 @@ const Faq: React.FC = () => {
               onClick={() => toggle(index)}
               className="flex justify-between items-center px-4 py-3 cursor-pointer"
             >
-              <span className="text-lg font-medium">{item.question}</span>
+              <span className="text-xl">{item.question}</span>
               <svg
                 className={`w-5 h-5 transform transition-transform duration-500 ${
                   openIndex === index ? "rotate-180" : ""
@@ -53,9 +53,7 @@ const Faq: React.FC = () => {
             </div>
 
             {openIndex === index && (
-              <div className="px-4 pb-4 text-sm text-gray-700">
-                {item.answer}
-              </div>
+              <div className="px-4 pb-4 text-sm">{item.answer}</div>
             )}
           </div>
         ))}

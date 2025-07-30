@@ -11,17 +11,17 @@ const PricingPlan = () => {
         <div className="mx-auto aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 clip-path-pricing-plan"></div>
       </div>
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-base/7 font-semibold text-indigo-600">Pricing</h2>
+        <h2 className="text-gray-600 text-sm">Pricing</h2>
         <p className="mt-2 text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
           Choose the right plan for you
         </p>
       </div>
-      <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-white sm:text-xl/8">
+      <p className="mx-auto mt-6 max-w-2xl text-center text-xl">
         Choose an affordable plan that’s packed with the best features for
         engaging your audience, creating customer loyalty, and driving sales.
       </p>
       <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
-        <div className="rounded-3xl rounded-t-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl">
+        <div className="rounded-3xl rounded-t-3xl bg-white p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl">
           <h3
             id="tier-hobby"
             className="text-base/7 font-semibold text-indigo-600"
