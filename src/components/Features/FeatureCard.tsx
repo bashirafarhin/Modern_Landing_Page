@@ -72,7 +72,7 @@ const FeatureCard = ({
 
   return (
     <div
-      className={`overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10 ${
+      className={`p-5 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10 ${
         reverse ? "md:flex-row-reverse" : ""
       }`}
     >

@@ -10,7 +10,7 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, imgUrl, link }) => {
   return (
-    <div className="group relative w-[30vw] aspect-square shrink-0 rounded-sm overflow-hidden transition-all duration-300 hover:p-2">
+    <div className="group relative min-w-[300px] min-h-[300px] w-[30vw] aspect-square shrink-0 rounded-sm overflow-hidden transition-all duration-300 hover:p-2">
       {/* Image */}
       <img
         src={imgUrl}

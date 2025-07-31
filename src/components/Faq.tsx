@@ -16,7 +16,7 @@ const Faq: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full px-4 py-8 my-24">
+    <div className="flex flex-col items-center justify-center w-full px-4 mb-24">
       <h2 className="text-[3rem] font-bold text-center">
         FAQ<span className="golden">s</span>
       </h2>
