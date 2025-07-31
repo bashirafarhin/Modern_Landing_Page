@@ -6,7 +6,7 @@ import Stats from "./Stats";
 const Testimonials: React.FC = () => {
   return (
     <section className="my-16 px-4">
-      <div className="flex gap-6 overflow-x-auto hide-scrollbar cursor-grab">
+      <div className="flex gap-15 overflow-x-auto hide-scrollbar cursor-grab">
         {testimonials.map((t, idx) => (
           <TestimonialCard key={idx} {...t} />
         ))}
