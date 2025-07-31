@@ -74,7 +74,7 @@ export const companyLogos = [
 
 export const marqueeItems = [
   <div key="mqi1" className="text-2xl font-bold">
-    Brands
+    Automate
   </div>,
   <img
     key="mqi2"
@@ -83,7 +83,7 @@ export const marqueeItems = [
     className="w-[70px] h-[70px] object-contain"
   />,
   <div key="mqi3" className="text-2xl font-bold">
-    Connect
+    Scale
   </div>,
   <img
     key="mqi4"
@@ -92,7 +92,7 @@ export const marqueeItems = [
     className="w-[70px] h-[70px] object-contain"
   />,
   <div key="mqi5" className="text-2xl font-bold">
-    Grow
+    Secure
   </div>,
   <img
     key="mqi6"
@@ -101,7 +101,7 @@ export const marqueeItems = [
     className="w-[70px] h-[70px] object-contain"
   />,
   <div key="mqi6" className="text-2xl font-bold">
-    Engage
+    Customizable
   </div>,
   <img
     key="mqi7"
@@ -110,7 +110,7 @@ export const marqueeItems = [
     className="w-[70px] h-[70px] object-contain"
   />,
   <div key="mqi8" className="text-2xl font-bold">
-    Boost
+    Powerful
   </div>,
   <img
     key="mqi9"

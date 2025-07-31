@@ -23,9 +23,9 @@ const Page = () => {
 
       <SlideInText
         lines={[
-          "Create Campaigns",
-          "Collaborate with brands",
-          "Grow your influence",
+          "Simplify Your Workflow",
+          "Supercharge Your Growth",
+          "Delievery at lightspeed",
         ]}
         className="my-50 ml-[5vw] uppercase"
       />

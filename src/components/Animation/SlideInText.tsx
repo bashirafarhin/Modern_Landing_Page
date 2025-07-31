@@ -41,7 +41,7 @@ export default function SlideInText({
   return (
     <div
       ref={containerRef}
-      className={`m-auto text-xl sm:text-4xl md:text-6xl lg:text-8xl font-bold space-y-2 ${className}`}
+      className={`m-auto text-xl sm:text-4xl md:text-6xl lg:text-7xl font-bold space-y-2 ${className}`}
       // className={`text-xl sm:text-4xl md:text-6xl lg:text-8xl font-bold space-y-2 uppercase ${className}`}
     >
       {lines.map((line, idx) => (

@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} border border-pink-500 flex flex-col justify-between min-h-screen font-sans antialiased`}
+        className={`${poppins.className} flex-col justify-between min-h-screen font-sans antialiased`}
       >
         <Header />
         <main className="mt-10">{children}</main>

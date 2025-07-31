@@ -15,15 +15,17 @@ const HeroSection = () => {
 
       {/* text */}
       <div className="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center flex-col text-center">
-        <h1 className="font-bold text-[6vw] sm:text-md">
-          Welcome to Our Platform
+        <h1 className="font-bold text-[5vw] sm:text-md">
+          Smarter Software
+          <br />
+          Better Business
         </h1>
         <div className="max-w-2xl my-3">
           <p className="font-extralight">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            commodi exercitationem deleniti doloremque facilis. Velit eligendi
-            itaque sunt laudantium cumque ratione quis atque placeat, eius
-            inventore, rerum porro animi omnis.
+            Running a modern business should not mean juggling multiple tools.
+            Our SaaS platform brings everything—project tracking, team
+            collaboration, customer management, and analytics—under one
+            powerful, intuitive dashboard. No code. No chaos. Just clarity.
           </p>
         </div>
         <div className="flex flex-col sm:flex-col md:flex-row items-center gap-4">
