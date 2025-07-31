@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ADmyBRAND AI Suite – SaaS Landing Page Assignment
 
-## Getting Started
+## 🚀 Live Demo
 
-First, run the development server:
+🔗 [View Live Demo](https://your-vercel-url.vercel.app)  
+_(Replace the link above with your actual deployed URL)_
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📘 Introduction
+
+This project is a submission for **Task B: Modern SaaS Landing Page & Component System**, built as part of an assignment. It showcases a fictional AI-powered marketing platform called **ADmyBRAND AI Suite** with a premium, responsive, and animated landing page.
+
+The landing page includes all modern SaaS design principles and engineering best practices, aiming for performance, clarity, and user engagement across all devices.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 14+](https://nextjs.org/docs) (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animation Libraries**: GSAP, Framer Motion
+- **Form Validation**: Zod + React Hook Form
+- **Component System**: Reusable custom UI components (8+)
+- **Deployment**: Vercel
+
+---
+
+## 📦 Features
+
+### ✨ Core Sections
+
+- **Hero Section**: Catchy headline, hero text, CTA, and image/video
+- **Features**: 6+ modern feature cards with icons
+- **Pricing**: 3-tier pricing card system
+- **Testimonials**: Auto-scrolling carousel with images
+- **FAQs**: Interactive accordion with common questions
+- **Footer**: Essential links, socials, and contact
+
+### 🎨 Design & UX
+
+- Glassmorphism and modern 2025 UI design trends
+- Fully responsive (mobile-first) layout
+- Smooth entrance animations using GSAP/Framer Motion
+- Accessible and semantic HTML
+- Crisp typography and layout hierarchy
+
+### 🧩 Reusable Component Library
+
+Includes:
+
+- `Button`
+- `Card`
+- `Modal`
+- `Accordion`
+- `PricingCard`
+- `TestimonialItem`
+- `FeatureIconCard`
+- `SectionWrapper`
+
+---
+
+## 🧠 AI Tools Used
+
+- **ChatGPT** – Architecture planning, animation logic, content generation, and debugging
+- **v0.dev** – Component skeleton generation and responsiveness suggestions
+- **Cursor IDE + GitHub Copilot** – Autocompletion and inline component logic help
+
+---
+
+## 📋 How to Run Locally
+
+1. Clone this repo
+   ```bash
+   git clone https://github.com/bashirafarhin/Modern_Landing_Page.git
+   ```
+2. Navigate to the project directory
+
+```
+ cd Modern_Landing_Page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run locally
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+ npm run dev
+```
