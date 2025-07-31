@@ -8,7 +8,7 @@ This document outlines how AI tools were utilized during the development of the 
 
 - **Primary tools**:
   - ChatGPT
-  - Lovable
+  - GitHub Copilot
 - **Key use cases**:
   - Creating responsive layouts with Tailwind CSS
   - Generating dummy data for:
