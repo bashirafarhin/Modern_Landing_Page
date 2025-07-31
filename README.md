@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Video Live Demo](https://your-vercel-url.vercel.app)
+🔗 [Video Live Demo](https://github.com/user-attachments/assets/5e7239ed-99d2-423b-aa8b-744d73556161)
 
 ---
 
