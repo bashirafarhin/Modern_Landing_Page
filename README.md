@@ -2,8 +2,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [View Live Demo](https://your-vercel-url.vercel.app)  
-_(Replace the link above with your actual deployed URL)_
+🔗 [Video Live Demo](https://your-vercel-url.vercel.app)
 
 ---
 
@@ -20,29 +19,28 @@ The landing page includes all modern SaaS design principles and engineering best
 - **Framework**: [Next.js 14+](https://nextjs.org/docs) (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Animation Libraries**: GSAP, Framer Motion
+- **Animation Libraries**: GSAP
 - **Form Validation**: Zod + React Hook Form
 - **Component System**: Reusable custom UI components (8+)
 - **Deployment**: Vercel
 
 ---
 
-## 📦 Features
-
 ### ✨ Core Sections
 
-- **Hero Section**: Catchy headline, hero text, CTA, and image/video
-- **Features**: 6+ modern feature cards with icons
-- **Pricing**: 3-tier pricing card system
-- **Testimonials**: Auto-scrolling carousel with images
-- **FAQs**: Interactive accordion with common questions
-- **Footer**: Essential links, socials, and contact
+- **Hero Section**: Bold headline, subtext, CTA, and a modern image with nimation
+- **Features**:6+ standout product features with icons and descriptions
+- **Projects**: Highlights real use-cases or benefits in visual blocks
+- **FAQ Section**: Interactive, collapsible frequently asked questions
+- **Testimonials**: Slider reviews with avatars
+- **Pricing Section**: 3-tier pricing cards with feature comparisons
+- **Footer**: Social links, legal info, and contact
 
 ### 🎨 Design & UX
 
-- Glassmorphism and modern 2025 UI design trends
+- modern 2025 UI design trends
 - Fully responsive (mobile-first) layout
-- Smooth entrance animations using GSAP/Framer Motion
+- Smooth entrance animations using GSAP
 - Accessible and semantic HTML
 - Crisp typography and layout hierarchy
 
@@ -53,19 +51,16 @@ Includes:
 - `Button`
 - `Card`
 - `Modal`
-- `Accordion`
-- `PricingCard`
-- `TestimonialItem`
-- `FeatureIconCard`
-- `SectionWrapper`
+- `Marquee`
 
 ---
 
 ## 🧠 AI Tools Used
 
 - **ChatGPT** – Architecture planning, animation logic, content generation, and debugging
-- **v0.dev** – Component skeleton generation and responsiveness suggestions
-- **Cursor IDE + GitHub Copilot** – Autocompletion and inline component logic help
+- **GitHub Copilot** – Autocompletion and inline component logic help
+
+- [Read my AI Usage Report](./AI_USAGE.md)
 
 ---
 
