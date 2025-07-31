@@ -20,7 +20,7 @@ const Faq: React.FC = () => {
       <h2 className="text-[3rem] font-bold text-center">
         FAQ<span className="golden">s</span>
       </h2>
-      <p className="text-gray-600 text-sm mb-6 text-center">
+      <p className="text-gray-600 font-extralight mb-6 text-center">
         Got questions? — We&apos;ve Got You Covered.
       </p>
 

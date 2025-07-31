@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import clsc from "../../utils/clsc";
+import cn from "../../lib/utils/cn";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ export default function Button({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={clsc(
+      className={cn(
         "font-semibold border px-2 py-1 hover:scale-105 rounded-md whitespace-nowrap hover:cursor-pointer transition-colors duration-300 ease-in-out",
         disabled ? "cursor-not-allowed" : "",
         className

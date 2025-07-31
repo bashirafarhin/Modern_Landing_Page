@@ -6,7 +6,7 @@ const Logo = () => {
     <div>
       <Link href="/">
         <i className="flex items-center">
-          <p className="text-[1rem] font-bold lg:text-2xl">ADmyBRAND</p>
+          <p className="text-[1rem] font-bold lg:text-2xl">ADDmyBRAND</p>
           {/* <span>.com</span> */}
         </i>
       </Link>

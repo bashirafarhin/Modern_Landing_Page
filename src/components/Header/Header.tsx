@@ -1,33 +1,20 @@
-import React from "react";
-import SignInButton from "./SignInButton";
-import Logo from "@/components/ui/Logo";
-import Navbar from "./Navbar";
+"use client";
+
+import React, { useState } from "react";
+import MenuToggleButton from "./MenuToggleButton";
+import FullScreenMenu from "./FullScreenMenu";
+import Logo from "../ui/Logo";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="top-3 inset-x-0 z-50">
-      <div
-        className="mx-auto w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:max-w-screen-xl
-                   px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between
-                   shadow-md border border-zinc-700 rounded-lg backdrop-blur-md"
-      >
+    <>
+      <header className="fixed top-0 left-0 z-50 w-full px-6 py-3 backdrop-blur-md flex justify-between items-center">
         <Logo />
-
-        {/* Desktop Nav */}
-        <div className="hidden md:block">
-          <Navbar isMobile={false} />
-        </div>
-
-        <div className="flex items-center gap-4">
-          <div className="hidden sm:flex">
-            <SignInButton />
-          </div>
-
-          <div className="block md:hidden">
-            <Navbar isMobile={true} />
-          </div>
-        </div>
-      </div>
-    </header>
+        <MenuToggleButton isOpen={isOpen} setIsOpen={setIsOpen} />
+      </header>
+      <FullScreenMenu isOpen={isOpen} />
+    </>
   );
 }

@@ -1,37 +1,40 @@
 import React from "react";
-import Marquee from "@/components/Marquee";
+import Marquee from "@/components/ui/Marquee";
 import { companyLogos, marqueeItems } from "../../data/marqueeData";
 import HeroSection from "@/components/HeroSection";
 import Faq from "@/components/Faq";
-import FadeInText from "@/components/Animation/FadeInText";
-import OurProjects from "@/components/OurProjects";
-import PricingPlan from "@/components/PricingPlan";
+import OurProjects from "@/components/OurProjects/OurProjects";
 import SlideInText from "@/components/Animation/SlideInText";
+import Pricing from "@/components/Pricing/Pricing";
+import Features from "@/components/Features/Features";
+import Testimonials from "@/components/Testimonials/Testimonials";
 
 const Page = () => {
   return (
     <>
       <HeroSection />
-      <SlideInText
-        lines={["Create Campaigns", "Grow your influence"]}
-        className="text-xl sm:text-4xl lg:text-6xl font-bold mt-[20vw] ml-[5vw] uppercase"
-      />
 
-      <div className="my-25 w-full">
-        <h1 className="text-gray-600 text-sm text-center">
+      <div className="mt-25 w-full">
+        <h1 className="font-extralight text-gray-500 text-center">
           Whom we have worked with
         </h1>
         <Marquee items={companyLogos} />
       </div>
-      <div className="pl-3 py-7">
-        <FadeInText text="Create campaigns" />
-        <FadeInText text="Collaborate with brands" />
-        <FadeInText text="Grow your influence" />
-      </div>
+
+      <SlideInText
+        lines={[
+          "Create Campaigns",
+          "Collaborate with brands",
+          "Grow your influence",
+        ]}
+        className="my-50 ml-[5vw] uppercase"
+      />
+      <Features />
       <Marquee items={marqueeItems} className="my-20" direction="reverse" />
       <OurProjects />
       <Faq />
-      <PricingPlan />
+      <Testimonials />
+      <Pricing />
     </>
   );
 };

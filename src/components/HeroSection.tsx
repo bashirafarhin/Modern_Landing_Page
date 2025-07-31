@@ -5,7 +5,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="w-full relative mx-auto rounded-xl p-4">
+    <div className="w-full relative mx-auto rounded-xl p-4 text-white">
       {/* circle */}
       <div className="mx-auto absolute w-full max-w-3xl aspect-square rounded-full smoke-glow pointer-events-none overflow-hidden">
         <div className="smoke-blob bg-yellow-200 opacity-20" />

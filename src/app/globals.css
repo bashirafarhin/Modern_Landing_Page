@@ -1,35 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: #121315;
+  --text-color: #e0eeee;
+  --font-main: Arial, Helvetica, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.custom-black {
+  background-color: #121315;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.custom-white {
+  color: #e0eeee;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-color);
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Import Dirtyline locally or via @font-face */
+@font-face {
+  font-family: "Dirtyline 36Daysoftype 2022";
+  src: url("/fonts/Dirtyline.ttf") format("truetype"); /* adjust path */
+  font-weight: 400;
+  font-style: normal;
+}
+
 .golden {
   color: #6b5e41;
+}
+
+.black-lighter {
+  color: #313234;
 }
 
 .clip-path-pricing-plan {
@@ -59,4 +66,14 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* Hides scrollbar for all browsers */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
